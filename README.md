@@ -1,6 +1,5 @@
-# Torch Action
-
-[![](http://cf.way2muchnoise.eu/full_torch-action_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/torch-action)
+[![](http://cf.way2muchnoise.eu/full_559660_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/torch-action)
+[![](http://cf.way2muchnoise.eu/versions/559660.svg)](https://www.curseforge.com/minecraft/mc-mods/torch-action)
 # Torch Action
 [Torch Action](https://www.curseforge.com/minecraft/mc-mods/torch-action) is a mod to help during mining by limiting the amount of times you need to switch items.
 
