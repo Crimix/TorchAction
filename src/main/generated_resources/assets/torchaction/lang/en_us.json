@@ -1,0 +1,13 @@
+{
+  "curios.identifier.torchholder": "Torch Holder",
+  "item.torchaction.torch_holder": "Torch Holder",
+  "itemGroup.torchaction": "Torch Action",
+  "torchaction.keys.category": "Torch Action",
+  "torchaction.keys.place_torch": "Place torch",
+  "torchaction.tooltip.amount_torches": "Holds \u00A76%s torches\u00A7r",
+  "torchaction.tooltip.auto_pickup": "Auto pickup",
+  "torchaction.tooltip.auto_pickup_toggle": "Sneak + Right click to toggle pickup",
+  "torchaction.tooltip.off": "\u00A7cOff\u00A7r",
+  "torchaction.tooltip.on": "\u00A7aOn\u00A7r",
+  "torchaction.tooltip.place_torch_key": "Press %s to place torch"
+}

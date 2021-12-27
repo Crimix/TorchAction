@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ttt",
+    "dcd",
+    "ttt"
+  ],
+  "key": {
+    "c": {
+      "tag": "forge:chests/wooden"
+    },
+    "d": {
+      "tag": "forge:gems/diamond"
+    },
+    "t": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "torchaction:torch_holder"
+  }
+}

@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[39,)"
+issueTrackerURL="https://github.com/Crimix/TorchAction/issues"
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license="All rights reserved"
+
+[[mods]]
+modId="torchaction"
+version="${file.jarVersion}"
+displayName="Torch Action"
+updateJSONURL="https://raw.githubusercontent.com/Crimix/TorchAction/1.18/update.json"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/torch-action"
+logoFile="torchaction-logo.png"
+credits="To all my friends for putting up with me breaking the server multiple times during testing"
+authors="black_dog20"
+description='''Placing torches using a keybind'''
+
+[[dependencies.torchaction]]
+    modId="forge"
+    mandatory=true
+    versionRange="[39.0.5,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.torchaction]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.1,1.19)"
+    ordering="NONE"
+    side="BOTH"
