@@ -72,6 +72,18 @@ public class TorchItemHandler extends ItemStackHandler {
                 .sum();
     }
 
+    public int getMaxCountOfItems() {
+        this.load();
+        return stacks.stream()
+                .map(ItemStack::getMaxStackSize)
+                .mapToInt(Integer::intValue)
+                .sum();
+    }
+
+    public boolean hasRoom() {
+        return getMaxCountOfItems() != getCountOfItems();
+    }
+
     @Nonnull
     @Override
     public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {

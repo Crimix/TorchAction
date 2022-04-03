@@ -1,6 +1,10 @@
 # Torch Action Changelog
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [1.18.2, 1.0.1] - 2022-04-03
+- Port to 1.18.2 may be a bit unstable as Forge 1.18.2 is in beta
+- Fixed items being duplicated when using auto-pickup in special scenario [#1](https://github.com/Crimix/TorchAction/issues/1)
+
 ## [1.18, 1.0.1] - 2021-12-27
 - Full release
 
