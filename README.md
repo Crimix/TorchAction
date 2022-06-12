@@ -1,5 +1,7 @@
-[![](http://cf.way2muchnoise.eu/full_559660_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/torch-action)
-[![](http://cf.way2muchnoise.eu/versions/559660.svg)](https://www.curseforge.com/minecraft/mc-mods/torch-action)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fcurseforge-badge-shields-io-caaw7pcenm0t.runkit.sh%2Fdownloads%3FprojectId%3D559660%26mode%3Dfull)](https://minecraft.curseforge.com/projects/torch-action)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fcurseforge-badge-shields-io-caaw7pcenm0t.runkit.sh%2Fversions%3FprojectId%3D559660)](https://minecraft.curseforge.com/projects/torch-action)   
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fmodrinth-badge-shields-io-s1co4c2czdpy.runkit.sh/%2Fdownloads%3FprojectId%3DIuHtpuyz%26mode%3Dfull)](https://modrinth.com/mod/torch-action)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fmodrinth-badge-shields-io-s1co4c2czdpy.runkit.sh%2Fversions%3FprojectId%3DIuHtpuyz)](https://modrinth.com/mod/torch-action)
 # Torch Action
 [Torch Action](https://www.curseforge.com/minecraft/mc-mods/torch-action) is a mod to help during mining by limiting the amount of times you need to switch items.
 
