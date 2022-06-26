@@ -4,7 +4,6 @@ import com.black_dog20.bml.utils.item.NBTUtil;
 import com.black_dog20.bml.utils.text.TextComponentBuilder;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.function.Supplier;
@@ -39,6 +38,6 @@ public final class TorchHolderProperties {
                     .with(ON.get(), OFF.get(), isOn)
                     .build();
         }
-        return new TextComponent("");
+        return Component.literal("");
     }
 }

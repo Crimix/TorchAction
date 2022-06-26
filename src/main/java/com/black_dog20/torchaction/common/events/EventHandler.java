@@ -6,6 +6,7 @@ import com.black_dog20.torchaction.common.utils.TorchHolderProperties;
 import com.black_dog20.torchaction.common.utils.TorchItemHandler;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -17,7 +18,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import java.util.Random;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Mod.EventBusSubscriber(modid = TorchAction.MOD_ID)
@@ -55,7 +55,7 @@ public class EventHandler {
                     .orElse(false);
 
             if (!itemEntity.isSilent()) {
-                Random rand = itemEntity.level.random;
+                RandomSource rand = itemEntity.level.random;
                 itemEntity.level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.2F, (getRandomFloatMinusRandomFloat(rand) * 0.7F + 1.0F) * 2.0F);
             }
             if (remainingStackSimulated.get().isEmpty()) {
@@ -74,7 +74,7 @@ public class EventHandler {
 
     }
 
-    private static float getRandomFloatMinusRandomFloat(Random rand) {
+    private static float getRandomFloatMinusRandomFloat(RandomSource rand) {
         return rand.nextFloat() - rand.nextFloat();
     }
 }

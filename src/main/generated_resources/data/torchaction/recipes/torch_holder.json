@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ttt",
-    "dcd",
-    "ttt"
-  ],
   "key": {
     "c": {
       "tag": "forge:chests/wooden"
@@ -16,6 +11,11 @@
       "item": "minecraft:torch"
     }
   },
+  "pattern": [
+    "ttt",
+    "dcd",
+    "ttt"
+  ],
   "result": {
     "item": "torchaction:torch_holder"
   }

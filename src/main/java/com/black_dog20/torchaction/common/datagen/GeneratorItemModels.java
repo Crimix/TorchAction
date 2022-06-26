@@ -5,6 +5,7 @@ import com.black_dog20.torchaction.TorchAction;
 import com.black_dog20.torchaction.common.items.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 public class GeneratorItemModels extends BaseItemModelProvider {
@@ -16,7 +17,7 @@ public class GeneratorItemModels extends BaseItemModelProvider {
     @Override
     protected void registerModels() {
         ModItems.ITEMS.getEntries().forEach(item -> {
-            String path = item.get().getRegistryName().getPath();
+            String path = ForgeRegistries.ITEMS.getKey(item.get()).getPath();
             singleTexture(path, mcLoc("item/handheld"), "layer0", modLoc("item/" + path));
         });
     }
