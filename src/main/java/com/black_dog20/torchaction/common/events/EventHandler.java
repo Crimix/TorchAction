@@ -27,10 +27,10 @@ public class EventHandler {
     public static void onItemPickup(EntityItemPickupEvent event) {
         ItemEntity itemEntity = event.getItem();
         AtomicReference<ItemStack> remainingStackSimulated = new AtomicReference<>(itemEntity.getItem().copy());
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
 
         if (remainingStackSimulated.get().getItem() == Items.TORCH) {
-            ItemStack torchHolder = ModUtils.findTorchHolder(event.getPlayer());
+            ItemStack torchHolder = ModUtils.findTorchHolder(event.getEntity());
             if (torchHolder.isEmpty())
                 return;
             if (!TorchHolderProperties.getAutoPickupMode(torchHolder))

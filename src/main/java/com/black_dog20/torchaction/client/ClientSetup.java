@@ -8,7 +8,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.ClientRegistry;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,8 +19,12 @@ public class ClientSetup {
 
     @SubscribeEvent
     public static void setupClient(FMLClientSetupEvent event) {
-        ClientRegistry.registerKeyBinding(Keybinds.PLACE);
         MenuScreens.register(ModContainers.TORCH_HOLDER_CONTAINER.get(), TorchHolderScreen::new);
+    }
+
+    @SubscribeEvent
+    public static void registerKeyBinding(RegisterKeyMappingsEvent event) {
+        event.register(Keybinds.PLACE);
     }
 
     @SubscribeEvent
