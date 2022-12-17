@@ -20,8 +20,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.items.CapabilityItemHandler;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -39,7 +39,7 @@ public class ItemTorchHolder extends Itembase {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(PLACE_TORCH_KEY.get(ChatFormatting.GRAY, KeybindsUtil.getKeyBindText(Keybinds.PLACE)));
-        stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+        stack.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
                 .filter(TorchItemHandler.class::isInstance)
                 .map(TorchItemHandler.class::cast)
                 .ifPresent(handler -> tooltip.add(AMOUNT_TORCHES.get(ChatFormatting.GRAY, handler.getCountOfItems())));

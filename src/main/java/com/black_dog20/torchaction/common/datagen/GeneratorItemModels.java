@@ -3,15 +3,15 @@ package com.black_dog20.torchaction.common.datagen;
 import com.black_dog20.bml.datagen.BaseItemModelProvider;
 import com.black_dog20.torchaction.TorchAction;
 import com.black_dog20.torchaction.common.items.ModItems;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 public class GeneratorItemModels extends BaseItemModelProvider {
 
-    public GeneratorItemModels(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, TorchAction.MOD_ID, existingFileHelper);
+    public GeneratorItemModels(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+        super(packOutput, TorchAction.MOD_ID, existingFileHelper);
     }
 
     @Override

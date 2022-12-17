@@ -11,12 +11,12 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.items.CapabilityItemHandler;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,7 +36,7 @@ public class EventHandler {
             if (!TorchHolderProperties.getAutoPickupMode(torchHolder))
                 return;
 
-            boolean hasRoom = torchHolder.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+            boolean hasRoom = torchHolder.getCapability(ForgeCapabilities.ITEM_HANDLER)
                     .filter(TorchItemHandler.class::isInstance)
                     .map(TorchItemHandler.class::cast)
                     .map(TorchItemHandler::hasRoom)
@@ -45,7 +45,7 @@ public class EventHandler {
             if (!hasRoom)
                 return;
 
-            torchHolder.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+            torchHolder.getCapability(ForgeCapabilities.ITEM_HANDLER)
                     .filter(TorchItemHandler.class::isInstance)
                     .map(TorchItemHandler.class::cast)
                     .map(handler -> {

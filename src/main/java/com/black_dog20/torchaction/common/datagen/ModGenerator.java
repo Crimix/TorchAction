@@ -20,13 +20,14 @@ public class ModGenerator {
     }
 
     private static void registerServerProviders(DataGenerator generator) {
-        generator.addProvider(true, new GeneratorRecipes(generator));
+        generator.addProvider(true, new GeneratorRecipes(generator.getPackOutput()));
     }
 
     private static void registerClientProviders(DataGenerator generator, GatherDataEvent event) {
         ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(true, new GeneratorItemModels(generator, helper));
-        generator.addProvider(true, new GeneratorLanguageEnglish(generator));
+        generator.addProvider(true, new GeneratorItemModels(generator.getPackOutput(), helper));
+        generator.addProvider(true, new GeneratorLanguageEnglish(generator.getPackOutput()));
+        generator.addProvider(true, new GeneratorSpriteSource(generator.getPackOutput(), helper));
     }
 }

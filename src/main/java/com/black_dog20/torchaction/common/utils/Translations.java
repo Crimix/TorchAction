@@ -5,6 +5,7 @@ import com.black_dog20.torchaction.TorchAction;
 
 public enum Translations implements ITranslation {
     CATEGORY("keys.category"),
+    ITEM_CATEGORY("itemGroup.torchaction"),
     KEY_PLACE_TORCH("keys.place_torch"),
 
     AMOUNT_TORCHES("tooltip.amount_torches"),

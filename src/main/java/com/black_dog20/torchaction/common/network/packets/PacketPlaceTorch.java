@@ -17,7 +17,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Consumer;
@@ -65,7 +65,7 @@ public class PacketPlaceTorch {
             if (holder.isEmpty() || !(holder.getItem() instanceof ItemTorchHolder))
                 return false;
 
-            TorchItemHandler torchItemHandler = holder.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+            TorchItemHandler torchItemHandler = holder.getCapability(ForgeCapabilities.ITEM_HANDLER)
                     .filter(TorchItemHandler.class::isInstance)
                     .map(TorchItemHandler.class::cast)
                     .orElse(null);

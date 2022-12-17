@@ -8,8 +8,8 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
@@ -26,7 +26,7 @@ public class TorchHolderContainer extends AbstractContainerMenu {
 
         container = mainHandItem.getItem() instanceof ItemTorchHolder ? mainHandItem : offHandItem.getItem() instanceof ItemTorchHolder ? offHandItem : ItemStack.EMPTY;
 
-        inventory = container.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY);
+        inventory = container.getCapability(ForgeCapabilities.ITEM_HANDLER);
 
         inventory.ifPresent(i -> {
             addSlots(i);

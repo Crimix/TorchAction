@@ -4,20 +4,20 @@ import com.black_dog20.bml.datagen.BaseLanguageProvider;
 import com.black_dog20.torchaction.TorchAction;
 import com.black_dog20.torchaction.common.items.ModItems;
 import net.minecraft.ChatFormatting;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import org.jetbrains.annotations.NotNull;
 
 import static com.black_dog20.torchaction.common.utils.Translations.*;
 
 public class GeneratorLanguageEnglish extends BaseLanguageProvider {
 
-    public GeneratorLanguageEnglish(DataGenerator gen) {
-        super(gen, TorchAction.MOD_ID, "en_us");
+    public GeneratorLanguageEnglish(PackOutput packOutput) {
+        super(packOutput, TorchAction.MOD_ID, "en_us");
     }
 
     @Override
     protected void addTranslations() {
-        add("itemGroup.torchaction", "Torch Action");
+        addPrefixed(ITEM_CATEGORY, "Torch Action");
         add(ModItems.TORCH_HOLDER.get(), "Torch Holder");
         add("curios.identifier.torchholder", "Torch Holder");
 

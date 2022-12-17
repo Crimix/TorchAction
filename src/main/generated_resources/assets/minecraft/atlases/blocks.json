@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "torchaction:item/empty_torchholder_slot"
+    }
+  ]
+}

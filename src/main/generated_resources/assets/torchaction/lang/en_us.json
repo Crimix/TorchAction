@@ -1,7 +1,7 @@
 {
   "curios.identifier.torchholder": "Torch Holder",
   "item.torchaction.torch_holder": "Torch Holder",
-  "itemGroup.torchaction": "Torch Action",
+  "torchaction.itemGroup.torchaction": "Torch Action",
   "torchaction.keys.category": "Torch Action",
   "torchaction.keys.place_torch": "Place torch",
   "torchaction.tooltip.amount_torches": "Holds §6%s torches§r",
