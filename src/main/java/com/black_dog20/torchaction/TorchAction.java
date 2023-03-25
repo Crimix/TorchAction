@@ -47,7 +47,7 @@ public class TorchAction {
         event.registerCreativeModeTab(new ResourceLocation(TorchAction.MOD_ID), builder -> builder
                 .icon(() -> new ItemStack(ModItems.TORCH_HOLDER.get()))
                 .title(Translations.ITEM_CATEGORY.get(ChatFormatting.RESET))
-                .displayItems((featureFlags, output, hasOp) -> {
+                .displayItems((parameters, output) -> {
                     output.accept(ModItems.TORCH_HOLDER.get());
                 })
         );
