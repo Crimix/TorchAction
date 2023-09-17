@@ -50,7 +50,7 @@ public class PacketPlaceTorch {
 
 
         private static void findAndPlaceTorch(ServerPlayer player, BlockHitResult hitResult) {
-            if (player.level.isClientSide)
+            if (player.level().isClientSide)
                 return;
 
             if (firstTryTorchHolder(player, hitResult))
@@ -112,10 +112,10 @@ public class PacketPlaceTorch {
             Direction direction = hitResult.getDirection();
             if (direction != Direction.DOWN) {
                 BlockState blockState = ((StandingAndWallBlockItem) Items.TORCH).getPlacementState(new BlockPlaceContext(player, InteractionHand.OFF_HAND, stack, hitResult));
-                boolean placed = player.level.setBlock(blockPos.offset(direction.getNormal()), blockState, 2);
+                boolean placed = player.level().setBlock(blockPos.offset(direction.getNormal()), blockState, 2);
                 if (placed) {
                     var soundType = Blocks.TORCH.getSoundType(Blocks.TORCH.defaultBlockState());
-                    player.level.playSound(null, blockPos, soundType.getPlaceSound(), SoundSource.BLOCKS, 1.0f, 0.8F);
+                    player.level().playSound(null, blockPos, soundType.getPlaceSound(), SoundSource.BLOCKS, 1.0f, 0.8F);
                     removeItemConsumer.accept(1);
                 }
                 return placed;

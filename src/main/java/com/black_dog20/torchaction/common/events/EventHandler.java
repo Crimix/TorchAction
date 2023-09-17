@@ -55,8 +55,8 @@ public class EventHandler {
                     .orElse(false);
 
             if (!itemEntity.isSilent()) {
-                RandomSource rand = itemEntity.level.random;
-                itemEntity.level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.2F, (getRandomFloatMinusRandomFloat(rand) * 0.7F + 1.0F) * 2.0F);
+                RandomSource rand = itemEntity.level().random;
+                itemEntity.level().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.2F, (getRandomFloatMinusRandomFloat(rand) * 0.7F + 1.0F) * 2.0F);
             }
             if (remainingStackSimulated.get().isEmpty()) {
                 itemEntity.setItem(ItemStack.EMPTY);
